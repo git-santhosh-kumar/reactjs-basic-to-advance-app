@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function UserForm() {
+export default function UserForm(props) {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -23,7 +23,8 @@ export default function UserForm() {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(formData);
-        alert('Form submitted!');
+        props.submitForm(formData)
+        // alert('Form submitted!');
     };
 
     const handleReset = () => {

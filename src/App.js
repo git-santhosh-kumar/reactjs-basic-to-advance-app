@@ -1,9 +1,9 @@
 import './App.css';
 import Header from './components/Header'
 import CounterCard from './components/CounterCard'
-import HelloCard from './components/ClassComponents/HelloCard'
+import HelloCard from './components/ClassComponents/CounterCard'
 import Footer from './components/Footer'
-import UserForm from './components/UserForm';
+import UserList from './components/UserList';
 
 function App() {
   return (
@@ -19,29 +19,7 @@ function App() {
         <br />
         <HelloCard msg="Hello from Parent Component"/>
 
-        <UserForm />
-        <p>x - paragraph</p>
-        <p>x - paragraph</p>
-
-        <p>x - paragraph</p>
-        <p>x - paragraph</p>
-
-        <p>x - paragraph</p>
-        <p>x - paragraph</p>
-        v
-        <p>x - paragraph</p>
-        <p>x - paragraph</p>
-        <p>x - paragraph</p>
-        <p>x - paragraph</p>
-        <p>x - paragraph</p>
-        <p>x - paragraph</p>
-        <p>x - paragraph</p>
-        <p>x - paragraph</p>
-
-
-        <p>x - paragraph</p>
-        <p>x - paragraph</p>
-        
+        <UserList />        
       </main>
 
       <Footer />
