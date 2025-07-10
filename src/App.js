@@ -1,7 +1,7 @@
 import './App.css';
 import Header from './components/Header'
 import CounterCard from './components/CounterCard'
-import HelloCard from './components/ClassComponents/CounterCard'
+import CounterCardCL from './components/ClassComponents/CounterCard'
 import Footer from './components/Footer'
 import UserList from './components/UserList';
 
@@ -12,12 +12,17 @@ function App() {
 
       <main className="main-wrapper">
         {/* <marquee> */}
-          <em>** Main Content - Add your code here. **</em>
+          <em className='bg-green-200'>** Main Content - Add your code here. **</em>
         {/* </marquee> */}
         
-        <CounterCard />
-        <br />
-        <HelloCard msg="Hello from Parent Component"/>
+        <div className="grid grid-cols-2 gap-4">
+          <div className="p-4 rounded">
+            <CounterCard />
+          </div>
+          <div className="p-4 rounded">
+            <CounterCardCL msg="Hello from Parent Component"/>
+          </div>
+        </div>
 
         <UserList />        
       </main>
