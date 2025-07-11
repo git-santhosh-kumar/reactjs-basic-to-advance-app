@@ -1,6 +1,7 @@
 
 import CounterCard from '../components/CounterCard'
 import CounterCardCL from '../components/ClassComponents/CounterCard'
+import Parent from '../components/ContextExample/parent'
 
 export default function Home() {
     return (
@@ -13,6 +14,8 @@ export default function Home() {
                     <CounterCardCL msg="Hello from Parent Component"/>
                 </div>
             </div>
+
+            <Parent />
         </>
     )
 }
