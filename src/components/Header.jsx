@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Header() {
     function toggleMobileView() {
         const menu = document.getElementById('mobile-menu');
@@ -12,10 +14,11 @@ export default function Header() {
                     <span className="text-xl font-bold">MyCompany</span>
                 </div>
                 <nav className="hidden md:flex space-x-6">
-                    <a href="#" className="hover:text-gray-300">Home</a>
-                    <a href="#" className="hover:text-gray-300">About</a>
-                    <a href="#" className="hover:text-gray-300">Services</a>
-                    <a href="#" className="hover:text-gray-300">Contact</a>
+                    <Link to="/" className="hover:text-gray-300">Home</Link>
+                    <Link to="/users" className="hover:text-gray-300">Users</Link>
+                    <Link to="/about" className="hover:text-gray-300">About</Link>
+                    <Link to="/services" className="hover:text-gray-300">Services</Link>
+                    <Link to="/contacts" className="hover:text-gray-300">Contact</Link>
                 </nav>
                 <div className="md:hidden">
                     {/* Mobile Menu Button */}
@@ -31,10 +34,11 @@ export default function Header() {
 
             {/* Mobile Menu */}
             <div id="mobile-menu" className="md:hidden hidden px-4 pb-4">
-                <a href="#" className="block py-2 text-gray-300 hover:text-white">Home</a>
-                <a href="#" className="block py-2 text-gray-300 hover:text-white">About</a>
-                <a href="#" className="block py-2 text-gray-300 hover:text-white">Services</a>
-                <a href="#" className="block py-2 text-gray-300 hover:text-white">Contact</a>
+                <Link to="/" className="block py-2 text-gray-300 hover:text-white">Home</Link>
+                <Link to="/users" className="block py-2 text-gray-300 hover:text-white">Users</Link>
+                <Link to="/about" className="block py-2 text-gray-300 hover:text-white">About</Link>
+                <Link to="/services" className="block py-2 text-gray-300 hover:text-white">Services</Link>
+                <Link to="/contacts" className="block py-2 text-gray-300 hover:text-white">Contact</Link>
             </div>
         </header>
     )

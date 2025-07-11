@@ -78,3 +78,7 @@ git add .
 git commit -m "Initial Commit"
 git remote add origin https://github.com/git-santhosh-kumar/reactjs-basic-to-advance-app.git
 ```
+## Routing setup
+```sh
+npm install react-router-dom
+```
