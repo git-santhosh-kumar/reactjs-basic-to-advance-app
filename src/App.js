@@ -1,31 +1,35 @@
 import './App.css';
+import { BrowserRouter,Routes ,Route} from "react-router-dom";
 import Header from './components/Header'
-import CounterCard from './components/CounterCard'
-import CounterCardCL from './components/ClassComponents/CounterCard'
 import Footer from './components/Footer'
-import UserList from './components/UserList';
+
+import Home from "./Pages/index";
+import About from "./Pages/about";
+import Services from "./Pages/services";
+import Contacts from "./Pages/contacts";
+import UserList from './Pages/user-list';
 
 function App() {
   return (
     <div className="App">
-      <Header />
 
-      <main className="main-wrapper">
-        {/* <marquee> */}
-          <em className='bg-green-200'>** Main Content - Add your code here. **</em>
-        {/* </marquee> */}
+      <BrowserRouter>
+        <Header/>
         
-        <div className="grid grid-cols-2 gap-4">
-          <div className="p-4 rounded">
-            <CounterCard />
-          </div>
-          <div className="p-4 rounded">
-            <CounterCardCL msg="Hello from Parent Component"/>
-          </div>
-        </div>
+        <main className="main-wrapper">
+          {/* <marquee> */}
+            <em className='bg-green-200'>** Main Content - Add your code here. **</em>
+          {/* </marquee> */}
 
-        <UserList />        
-      </main>
+          <Routes>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/users" element={<UserList/>}/>
+            <Route path="/about" element={<About/>} />
+            <Route path="/contacts" element={<Contacts/>} />
+            <Route path="/services" element={<Services/>} />          
+          </Routes>
+        </main>
+      </BrowserRouter>
 
       <Footer />
     </div>

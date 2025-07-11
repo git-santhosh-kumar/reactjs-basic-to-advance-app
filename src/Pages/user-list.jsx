@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import UserForm from './UserForm';
+import UserForm from '../components/UserForm';
 
 export default function UserList() {
     const [users, setUsers] = useState([]);
